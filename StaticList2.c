@@ -5,7 +5,7 @@ typedef struct Node {
     ElemType data;
     struct Node *next;
 } Node, *LinkList;
-//静态链表的学习2
+//动态链表的学习1
 int main()
 {
     LinkList s = (LinkList)malloc(sizeof(Node));

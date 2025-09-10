@@ -5,13 +5,13 @@ typedef struct Node {
     ElemType data;
     struct Node *next;
 } Node, *LinkList;
-//静态链表的学习3
+//动态链表的学习2
 int main()
 {
     ElemType tmp;
     scanf("%d", &tmp);
     LinkList s, newS, head, cur, tmp2;
-    ElemType count;
+    ElemType count = 0;
     while(tmp != 666) {
         count++;
         newS = (LinkList)malloc(sizeof(Node));
