@@ -10,7 +10,7 @@ int main()
 {
     ElemType tmp, count;
     scanf("%d", &tmp);
-    LinkList s, newS, head, cur, tmp2;
+    LinkList s, newS, head, cur,  tmp2;
     count = 0;
     while(tmp != 666) {
         count++;
@@ -37,21 +37,5 @@ int main()
             free(cur);
             cur = tmp2;
         }
+        return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
