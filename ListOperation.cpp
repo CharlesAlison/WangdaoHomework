@@ -223,69 +223,69 @@ int main(){
 	} 
 	
 	//输出顺序表L中的所有数据元素
-	printf("顺序表L中的所有数据元素为：\n");
+	printf("顺序表L中的所有数据元素为:\n");
 	ListTraverse_Sq(L, print);//依次输出顺序表L中的数据元素 
 	
 	//将顺序表L中的所有数据元素自增1并输出
 	ListTraverse_Sq(L, auto_increment);//依次将顺序表L中的数据元素自增1 
-	printf("自增1后，顺序表L中的所有数据元素为：\n");
+	printf("自增1后,顺序表L中的所有数据元素为:\n");
 	ListTraverse_Sq(L, print);
 	
 	//判断顺序表L是否为空表
-	printf("\n若输出1，则顺序表L为空表；若输出0，则顺序表L不为空表：\n%d\n", ListEmpty_Sq(L)); 
+	printf("\n若输出1,则顺序表L为空表;若输出0,则顺序表L不为空表:\n%d\n", ListEmpty_Sq(L)); 
 	
 	//输出顺序表L中的数据元素个数 
-	printf("\n顺序表L中的数据元素个数为：\n%d\n", ListLength_Sq(L));
+	printf("\n顺序表L中的数据元素个数为:\n%d\n", ListLength_Sq(L));
 	
 	//获取顺序表L中第i个数据元素
 	int e0 = 0, i = 5;//i表示数据元素的位序 
 	GetElem_Sq(L, i, e0);//将第i个数据元素存于e0中 
-	printf("\n顺序表L中第%d个数据元素为：\n%d\n", i, e0); 
+	printf("\n顺序表L中第%d个数据元素为:\n%d\n", i, e0); 
 	
 	//输出顺序表L中与指定数据元素满足一定关系的数据元素的位序(此实例中为相等关系)
 	int e1 = 4;//e1为指定的数据元素
-	printf("\n与%d具有相等关系的数据元素的位序为：\n%d\n", e1, LocateElem_Sq(L, e1, Equal));//返回顺序表L中与e具有相等关系的数据元素的位序
+	printf("\n与%d具有相等关系的数据元素的位序为:\n%d\n", e1, LocateElem_Sq(L, e1, Equal));//返回顺序表L中与e具有相等关系的数据元素的位序
 	 
 	//输出指定数据元素的前驱
 	int e2 = 5;//e2为指定的数据元素
 	int pre_e2 = 0;//pre_e2用于存储e2的前驱
 	PriorElem_Sq(L, e2, pre_e2);//获取e2的前驱并将其存于pre_e2中
-	printf("\n%d的前驱为：\n%d\n", e2, pre_e2); 
+	printf("\n%d的前驱为:\n%d\n", e2, pre_e2); 
 	
 	//输出指定数据元素的后继
 	int e3 = 4;//e3为指定的数据元素
 	int next_e3 = 0;//next_e3用于存储e3的后继
 	NextElem_Sq(L, e3, next_e3);//获取e3的后继并将其存于next_e3中
-	printf("\n%d的后继为：\n%d\n", e3, next_e3);
+	printf("\n%d的后继为:\n%d\n", e3, next_e3);
 	
 	//向顺序表中插入指定数据元素
 	int i1 = 4;//i1为插入位置的位序
 	int e4 = 25;//e4为要出入的指定数据元素
-	printf("\n插入数据元素前，顺序表L的长度和存储空间大小分别为：\n%d和%d", L.length, L.listsize);
+	printf("\n插入数据元素前,顺序表L的长度和存储空间大小分别为:\n%d和%d", L.length, L.listsize);
 	ListInsert_Sq(L, i1, e4);//向顺序表L中插入e4
-	printf("\n插入数据元素后，顺序表L的长度和存储空间大小分别为：\n%d和%d\n", L.length, L.listsize);
-	printf("插入数据元素后，顺序表L的所有数据元素为：\n");
+	printf("\n插入数据元素后,顺序表L的长度和存储空间大小分别为:\n%d和%d\n", L.length, L.listsize);
+	printf("插入数据元素后,顺序表L的所有数据元素为:\n");
 	ListTraverse_Sq(L, print);
 	
 	//向顺序表中删除指定数据元素
 	int i2 = 3;//i2为删除位置的位序
 	int e5 = 0;//e5用于存储被删除的数据元素 
-	printf("\n删除数据元素前，顺序表L的长度和存储空间大小分别为：\n%d和%d", L.length, L.listsize);
+	printf("\n删除数据元素前,顺序表L的长度和存储空间大小分别为:\n%d和%d", L.length, L.listsize);
 	ListDelete_Sq(L, i2, e5);//删除顺序表L中位序为i2的数据元素并将其存于e5中 
-	printf("\n删除数据元素后，顺序表L的长度和存储空间大小分别为：\n%d和%d\n", L.length, L.listsize);
-	printf("删除的数据元素为：\n%d\n", e5);
-	printf("删除数据元素后，顺序表L的所有数据元素为：\n");
+	printf("\n删除数据元素后,顺序表L的长度和存储空间大小分别为:\n%d和%d\n", L.length, L.listsize);
+	printf("删除的数据元素为:\n%d\n", e5);
+	printf("删除数据元素后,顺序表L的所有数据元素为:\n");
 	ListTraverse_Sq(L, print);
 	
 	//将顺序表重置为空表
-	printf("\n(顺序表L重置为空表前)若输出1，则顺序表L为空表；若输出0，则顺序表L不为空表：\n%d", ListEmpty_Sq(L)); 
+	printf("\n(顺序表L重置为空表前)若输出1,则顺序表L为空表;若输出0,则顺序表L不为空表:\n%d", ListEmpty_Sq(L)); 
 	ClearList_Sq(L);//将顺序表L值为空表
-	printf("\n(顺序表L重置为空表后)若输出1，则顺序表L为空表；若输出0，则顺序表L不为空表：\n%d\n", ListEmpty_Sq(L));
-	
+	printf("\n(顺序表L重置为空表后)若输出1,则顺序表L为空表;若输出0,则顺序表L不为空表:\n%d\n", ListEmpty_Sq(L));
+
 	//销毁顺序表 
-	printf("\n(销毁顺序表L前)顺序表L的基地址、长度和存储空间大小分别为：\n%d、%d、%d", L.elem, L.length, L.listsize);
+	printf("\n(销毁顺序表L前)顺序表L的基地址、长度和存储空间大小分别为:\n%d、%d、%d", L.elem, L.length, L.listsize);
 	DestroyList_Sq(L);//销毁顺序表L
-	printf("\n(销毁顺序表L后)顺序表L的基地址、长度和存储空间大小分别为：\n%d、%d、%d\n", L.elem, L.length, L.listsize);
+	printf("\n(销毁顺序表L后)顺序表L的基地址、长度和存储空间大小分别为:\n%d、%d、%d\n", L.elem, L.length, L.listsize);
 	
 	return 0;
 } 
