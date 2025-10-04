@@ -22,7 +22,7 @@ bool ListInsert(SqList &L, int i, ElemType e) {
     return true;
 }
 
-bool ListDelete(SqList &L, int i, ElemType e) {
+bool ListDelete(SqList &L, int i, ElemType &e) {
     if (i < 1 || i > L.length) {
         return false;
     }
@@ -65,16 +65,6 @@ int main()
     else {
         printf("false");
     }
-
+    printf("%d\n", e2);
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
