@@ -3,7 +3,7 @@ int main()
 {
     int n;
     scanf("%d", &n);
-    int a[n];
+    int a[n + 1];
     if(n % 2 == 0) {
         for (int i = 1; i <= n / 2; i++) {
             a[i] = i; 
@@ -24,5 +24,6 @@ int main()
     for (int i = 1; i <= n; i++) {
         printf("%d ", a[i]);
     }
+    printf("\n");
     return 0;
 }
